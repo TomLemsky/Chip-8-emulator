@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chip-8</title>
+    <style>
+	canvas {
+  border: 5px solid #ddd;
+  /* to make canvas non-blurry */
+  image-rendering: optimizeSpeed;             /* Older versions of FF          */
+  image-rendering: -moz-crisp-edges;          /* FF 6.0+                       */
+  image-rendering: -webkit-optimize-contrast; /* Safari                        */
+  image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
+  image-rendering: pixelated;                 /* Awesome future-browsers       */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE                            */
+	}
+	canvas#display { width: 1200px; height: 600px; } /* 5 * 21 = 105 */
+    
+.column1 {
+  float: left;
+  width: 66.66%;
+}
+
+.column2 {
+  float: right;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.textbox{
+height:600px;
+overflow:auto;
+}
+    </style>
+    <script src="c8.js"></script>
+  </head>
+  <body>
+   <div class="row">
+        <div class="column1">
+            <canvas id="display" width="128" height="64"></canvas>
+        </div>
+        <div class="column2">
+            <div class="textbox" id="textbox"> abc def </div>
+        </div>
+    </div> 
+    
+    
+  </body>
+</html>
