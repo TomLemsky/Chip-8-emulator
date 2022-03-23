@@ -3,53 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Chip-8</title>
-    <style>
-	canvas {
-  border: 5px solid #ddd;
-  /* to make canvas non-blurry */
-  image-rendering: optimizeSpeed;             /* Older versions of FF          */
-  image-rendering: -moz-crisp-edges;          /* FF 6.0+                       */
-  image-rendering: -webkit-optimize-contrast; /* Safari                        */
-  image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
-  image-rendering: pixelated;                 /* Awesome future-browsers       */
-  -ms-interpolation-mode: nearest-neighbor;   /* IE                            */
-	}
-	canvas#display { width: 1200px; height: 600px; } /* 5 * 21 = 105 */
-    
-.column1 {
-  float: left;
-  width: 66.66%;
-}
-
-.column2 {
-  float: right;
-  width: 33.33%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.textbox{
-height:600px;
-overflow:auto;
-}
-    </style>
     <script src="c8.js"></script>
+    <link rel="stylesheet" href="c8.css">
   </head>
   <body>
+      <h1>Chip-8 Emulator in pure JavaScript</h1>
    <div class="row">
         <div class="column1">
             <canvas id="display" width="128" height="64"></canvas>
         </div>
         <div class="column2">
-            <div class="textbox" id="textbox"> abc def </div>
+            <div class="textbox" id="textbox"> </div>
         </div>
-    </div> 
-    
-    
+    </div>
+    <p> The 4x4 keypad of Chip-8 is mapped to the keys: 1234 qwer asdf yxcv</p>
+    <p> For Tetris: 'W' = left, 'E' = right, 'Q' = rotate </p>
+    <p> The ROM files are public domain from <a href="https://www.zophar.net/pdroms/chip8.html">Zophar's domain</a> </p>
+<!---    Select game:
+    <select name="gameselector" id="gameselector">
+      <option value="tetris">Tetris</option>
+      <option value="pong">Pong</option>
+      <option value="invaders">Invaders</option>
+    </select>
+    </p>
+    The 4x4 keypad of Chip-8 are mapped to the keys: 1234 qwer asdf yxcv
+--->
   </body>
 </html>

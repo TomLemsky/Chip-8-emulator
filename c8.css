@@ -1,0 +1,33 @@
+canvas {
+border: 5px solid #ddd;
+/* to make canvas non-blurry */
+image-rendering: optimizeSpeed;             /* Older versions of FF          */
+image-rendering: -moz-crisp-edges;          /* FF 6.0+                       */
+image-rendering: -webkit-optimize-contrast; /* Safari                        */
+image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
+image-rendering: pixelated;                 /* Awesome future-browsers       */
+-ms-interpolation-mode: nearest-neighbor;   /* IE                            */
+}
+canvas#display { width: 1200px; height: 600px; } /* 5 * 21 = 105 */
+
+.column1 {
+float: left;
+width: 60%;
+}
+
+.column2 {
+float: right;
+width: 30%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.textbox{
+height:600px;
+overflow:auto;
+}
