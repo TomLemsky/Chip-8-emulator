@@ -547,7 +547,7 @@ window.onload = function(){
 
     var textbox  = document.getElementById("textbox");
 
-    initialize(picture_rom);
+    initialize(tetris_rom);
 
 	window.requestAnimationFrame(loop);
     // instruction loop
